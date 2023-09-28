@@ -1,0 +1,102 @@
+table {
+    width: 100%;
+    border-collapse: collapse;
+    border-spacing: 0;
+    background-color: #fff;
+    border-radius: 20px;
+    box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.2);
+    padding: 30px;
+    text-align: center;
+    
+  }
+  
+thead {
+    background-color: #3baea0;
+    
+  }
+  
+  thead th {
+    padding: 12px;
+    text-align: left;
+  }
+  
+  tbody tr:nth-child(even) {
+    background-color: #f2f2f2;
+    vertical-align: middle;
+    text-align: left;
+   
+  }
+  
+  tbody td {
+    padding: 8px;
+    text-align: left;
+    vertical-align: middle;
+    color:#1f6f78;
+    align-items: center;
+  
+  }
+  
+  tbody td img {
+    width: 40px;
+    height: 40px;
+    align-self: left;
+    margin-right: 10px;
+    object-fit: cover;
+    
+  }
+  .txt{
+    margin-bottom: 15px;
+  }
+  tbody td:last-child {
+    text-align: center;
+  }
+  
+  button {
+    align-self: start;
+    padding: 6px 12px;
+    margin-right: 15px;
+    background-color: #118a7e;
+    color: white;
+    border: none;
+    cursor: pointer;
+    border-radius: 13px;
+  }
+  
+  button:hover {
+    background-color: #1f6f78;
+  }
+
+  .user-list-container{
+    position:absolute;
+    padding-right: 50px;
+    width:80%;
+  }
+
+  .filter-panel{
+    border:white;
+    color:white;
+    background-color: #1f6f78;
+    border-radius: 25px;
+    box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.2);
+    padding: 10px;
+    text-align: center;
+    font-size: medium;
+    margin-left: 10px;
+    position: relative;
+    bottom: 25px;
+  }
+
+  .filter-panel input{
+    background-color: #1f6f78;
+    border: #1f6f78;
+  }
+
+  .filter-panel input::placeholder {
+    color:white;
+    font-size: medium;
+  }
+
+  .search{
+    position: relative;
+    left: 490px;
+  }

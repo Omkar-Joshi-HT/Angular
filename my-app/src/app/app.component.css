@@ -1,0 +1,97 @@
+
+.container {  display: grid;
+    margin: 0;
+    padding: 0;
+    grid-template-columns: 0.2fr 1.5fr 0.1fr;
+    grid-template-rows: 0.2fr 1.2fr 1fr;
+    gap: 0px 0px;
+    grid-auto-flow: row;
+    
+    grid-template-areas:
+      "menu nav nav"
+      "menu main main"
+      "menu main main";
+      position:absolute;
+      width: 100%;
+  }
+  
+  .menu { 
+    grid-area: menu;
+    width: 200px;
+    height: 100%;
+    
+    
+    
+    
+    
+}
+  
+  .nav { grid-area: nav; display: block;
+    margin-bottom:100px;
+    position: relative;
+    top:20px;
+    left:150px;
+    }
+  
+  .main { 
+    grid-area: main; 
+    width:95%;
+    
+}
+  .button {
+    box-shadow: inset 0 1px 0 0 #ffffff;
+    background: #fdfdfd ;
+    border-radius: 6px;
+    border: 1px solid #dcdcdc;
+    display: inline-block;
+    cursor: pointer;
+    color:#1f6f78 ;
+    font-family: Arial, sans-serif;
+    font-size: 15px;
+    font-weight: bold;
+    padding: 6px 24px;
+    text-decoration: none;
+    text-shadow: 0 1px 0 #ffffff;
+    outline: 0;
+    margin-left: 50px;
+}
+.activebutton {
+    box-shadow: inset 0 1px 0 0 #dcecfb;
+    background: #1f6f78  ;
+    border: 1px solid #93e4c1;
+    color: #ffffff;
+    text-shadow: 0 1px 0 #93e4c1;
+}
+
+.main-menu{
+  position: relative;
+  top:50px;
+  left:-20px;
+  /* text-align: center; */
+}
+.main-menu li {
+    padding: 10px;
+    color:black;
+    list-style-type: none;
+    margin-bottom: 20px;
+}
+.main-menu li:hover {
+    background-color: #1f6f78;
+    color: white;
+    cursor: pointer;
+    border-radius: 15px;
+}
+.main-menu li a{
+  text-decoration: none;
+}
+
+.main-menu li a:hover,.main-menu li a:visited{
+  color: inherit;
+}
+
+.active {
+    background-color: #1f6f78;
+    border-radius: 15px;
+    border:solid #1f6f78 2px;
+    color: white; 
+} 

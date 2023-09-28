@@ -1,0 +1,52 @@
+.pagination {
+    display: flex;
+    justify-content: flex-end; /* To move the pagination to the right */
+    align-items: center;
+    margin-top: 20px; /* Adjust the margin as needed */
+  }
+  
+  /* Previous Page and Next Page Buttons */
+  .pagination button {
+    background-color: #1f6f78; /* Background color */
+    color: white; /* Text color */
+    border: none;
+    padding: 10px 20px;
+    margin: 0 5px;
+    border-radius: 25px; /* Border radius */
+    cursor: pointer;
+  }
+  
+  /* Disabled state for Previous Page and Next Page Buttons */
+  .pagination button[disabled] {
+    background-color: #ccc; /* Disabled background color */
+    cursor: not-allowed;
+  }
+  
+  /* Page Number Display */
+  .pagination span {
+    margin: 0 10px;
+    font-weight: bold;
+  }
+  
+  /* Items per Page Label and Select */
+  .pagination label {
+    margin-right: 10px;
+    font-weight: bold;
+  }
+  
+  .pagination select {
+    padding: 5px;
+    border-radius: 5px;
+    border: 1px solid #ccc;
+  }
+  
+  /* Additional Styling (customize as needed) */
+  /* Example: Hover effect for buttons */
+  .pagination button:hover {
+    background-color: #345e67; /* Hover background color */
+  }
+  
+  /* Example: Hover effect for select dropdown */
+  .pagination select:hover {
+    border-color: #345e67; /* Hover border color */
+  }

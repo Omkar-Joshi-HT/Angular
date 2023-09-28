@@ -1,0 +1,10 @@
+<span class="pagination">
+  Items per page:
+  <select class="option" (change)="onItemsPerPageChange($event)">
+      <option *ngFor="let option of itemsPerPageOptions" [value]="option">{{ option }}</option>
+  </select>
+  {{ getDisplayText() }}
+  <button (click)="prevPage()" [disabled]="currentPage === 1">&lt;</button>
+  <span>Page {{ currentPage }} / {{ totalPages }}</span>
+  <button (click)="nextPage()" [disabled]="currentPage === totalPages">&gt;</button>
+</span>

@@ -1,0 +1,8 @@
+<span>Sort By
+    <select id="sorting" [(ngModel)]="selectedSortOption" (change)="onSortChange()" value="Sort By">
+        <option value="asc">A to Z</option>
+        <option value="desc">Z to A</option>
+        <option value="createdDate">Created Date</option>
+        <option value="lastUpdated">Last updated</option>
+    </select>
+</span>

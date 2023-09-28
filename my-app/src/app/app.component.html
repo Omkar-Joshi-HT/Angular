@@ -1,0 +1,22 @@
+<div class="container">
+  <div class="menu">
+    <ul class="main-menu">
+      <li routerLinkActive="active" routerLink="/total-users"><a   ariaCurrentWhenActive="page">Dashboard</a></li>
+      <li routerLinkActive="active" routerLink="/user-list"><a   ariaCurrentWhenActive="page">Users</a></li>
+    </ul>
+  </div>
+  
+  <div class="nav">
+    <a class="button" routerLink="/user-list" routerLinkActive="activebutton" ariaCurrentWhenActive="page">
+      List
+    </a>
+    <a class="button" routerLink="/user-card" routerLinkActive="activebutton" ariaCurrentWhenActive="page">
+      Card
+    </a>
+    <a class="button" routerLink="/add-user" routerLinkActive="activebutton" ariaCurrentWhenActive="page">
+      Add
+    </a>
+
+  </div>
+  <div class="main"><router-outlet></router-outlet></div>
+</div>

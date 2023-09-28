@@ -1,0 +1,35 @@
+
+<form action="/" class="decor" (ngSubmit)="onSubmit()" #userForm="ngForm">
+    <div class="form-inner">
+        <div>
+            <label for="Name">First Name:</label>
+            <input type="text" id="firstname" class="textBox" name="firstname" [(ngModel)]="newUser.firstName" required>
+        </div>
+        <div>
+            <label for="Name">Last Name:</label>
+            <input type="text" id="lastname" class="textBox" name="lastname" [(ngModel)]="newUser.lastName" required>
+        </div>
+        <div>
+            <label for="email">Email:</label>
+            <input type="email" id="email" class="textBox" name="email" [(ngModel)]="newUser.email" required>
+        </div>
+        <div>
+            <label for="phone">Phone:</label>
+            <input type="text" id="phone" class="textBox" name="phone" [(ngModel)]="newUser.phone" required>
+        </div>
+        <div>
+            <label for="role">Role:</label>
+            <input type="text" id="role" class="textBox" name="role" [(ngModel)]="newUser.role" required>
+        </div>
+        <div>
+            <label for="password">Password:</label>
+            <input type="password" id="password" class="textBox" name="password" [(ngModel)]="newUser.password" required>
+        </div>
+        <div>
+            <label for="confirmPassword">Confirm Password:</label>
+            <input type="password" id="confirmPassword" class="textBox" name="confirmPassword" [(ngModel)]="confirmPassword"
+                required>
+        </div>
+        <button type="submit" [disabled]="userForm.invalid || newUser.password !== confirmPassword">Add User</button>
+    </div>
+</form>

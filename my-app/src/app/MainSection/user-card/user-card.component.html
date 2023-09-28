@@ -1,0 +1,14 @@
+<span class="user-card-container" fxLayout="row wrap" fxLayout.xs="column">
+    <span class="card" fxFlex="calc(33.33% - 20px)" *ngFor="let user of users">
+        <div class="card-content">
+            <span class="card-image">
+                <img src="./assets/user.png" alt="User Image">
+            </span>
+            <div class="card-info">
+                <h2>{{ user.name }}</h2>
+                <p>{{ user.email }}</p>
+                <p>{{ user.active ? 'active' : 'inactive' }}</p>
+            </div>
+        </div>
+    </span>
+</span>

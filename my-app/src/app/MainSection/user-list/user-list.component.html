@@ -1,0 +1,53 @@
+<span class="user-list-container">
+    <div class="panel">
+        <span class="filter-panel">
+            <app-sorting (sortChange)="onSortChange($event)"></app-sorting>
+        </span>
+        <span class="filter-panel">
+            <app-filtering (roleFilterChanged)="onRoleFilterChanged($event)"></app-filtering>
+        </span>
+        <span class="search">
+            <input type="text" placeholder="Search" [(ngModel)]="searchQuery" (input)="onSearch()" class="filter-panel">
+        </span>
+    </div>
+    <div class="spacing"></div>
+    <div></div>
+    <table>
+        <thead>
+            <tr>
+                <th>ID</th>
+                <th>Name</th>
+                <th>Phone</th>
+                <th>Last Login</th>
+                <th>Role</th>
+                <th>Actions</th>
+            </tr>
+        </thead>
+        <tbody>
+            <ng-container *ngIf="filteredUsers.length > 0 ; else noResults">
+                <tr *ngFor="let user of filteredUsers.slice(0,recordsPerPage)">
+                    <td>{{ user.id }}</td>
+                    <td><img src="./assets/user.png" alt="User Image"> {{ user.firstName }} {{ user.lastName }}</td>
+                    <td>{{ user.phone }}</td>
+                    <td>{{ user.lastUpdated }}</td>
+                    <td>{{ user.role }}</td>
+                    <td>
+                        <button (click)="editUser(user)">Edit</button>
+                        <button (click)="deleteUser(user)">Delete</button>
+                    </td>
+                </tr>
+            </ng-container>
+            <ng-template #noResults>
+                <tr>
+                    <td colspan="6">No results found.</td>
+                </tr>
+            </ng-template>
+        </tbody>
+    </table>
+    <div class="pagination">
+        <app-pagination [totalRecords]="totalRecords" [recordsPerPage]="recordsPerPage"
+            [itemsPerPageOptions]="itemsPerPageOptions" (pageChange)="onPageChange($event)"
+            (itemsPerPageChange)="onItemsPerPageChange($event)"></app-pagination>
+    </div>
+
+</span>

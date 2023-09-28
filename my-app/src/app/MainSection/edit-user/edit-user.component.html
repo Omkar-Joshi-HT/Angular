@@ -1,0 +1,35 @@
+<span class="user-edit-contanier">
+    <form (ngSubmit)="onSubmit()" #userForm="ngForm">
+        <div>
+            <label for="firstName">First Name:</label>
+            <input type="text" id="firstName" name="firstName" [(ngModel)]="editedUser.firstName" required>
+        </div>
+        <div>
+            <label for="lastName">Last Name:</label>
+            <input type="text" id="lastName" name="lastName" [(ngModel)]="editedUser.lastName" required>
+        </div>
+        <div>
+            <label for="email">Email:</label>
+            <input type="email" id="email" name="email" [(ngModel)]="editedUser.email" required>
+        </div>
+        <div>
+            <label for="phone">Phone:</label>
+            <input type="text" id="phone" name="phone" [(ngModel)]="editedUser.phone" required>
+        </div>
+        <div>
+            <label for="role">Role:</label>
+            <input type="text" id="role" name="role" [(ngModel)]="editedUser.role" required>
+        </div>
+        <div>
+            <label for="password">Password:</label>
+            <input type="password" id="password" name="password" [(ngModel)]="editedUser.password" required>
+        </div>
+        <div>
+            <label for="confirmPassword">Confirm Password:</label>
+            <input type="password" id="confirmPassword" name="confirmPassword" [(ngModel)]="editedUser.confirmPassword"
+                required>
+        </div>
+        <button type="submit"
+            [disabled]="userForm.invalid || editedUser.password !== editedUser.confirmPassword">Save</button>
+    </form>
+</span>
